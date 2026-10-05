@@ -1,0 +1,2 @@
+const io=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target.style.opacity=1;x.target.style.transform='none';io.unobserve(x.target)}}),{threshold:.1});
+document.querySelectorAll('.article').forEach(el=>{el.style.opacity=0;el.style.transform='translateY(16px)';el.style.transition='opacity .6s ease,transform .6s ease';io.observe(el)});
